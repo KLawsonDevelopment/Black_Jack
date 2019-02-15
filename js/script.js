@@ -93,6 +93,10 @@ $(document).ready(function () {
             $('#bust').text("House and player have tied!")
         }
 
+        if (dealerTotal>playerTotal){
+            $('#bust').text("House wins!");
+        }
+
         while (dealerTotal < 16 && playerTotal>dealerTotal) {
 
             dealerTotal = 0;
