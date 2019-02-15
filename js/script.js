@@ -31,7 +31,6 @@ $(document).ready(function () {
     function playerCheck () {if (playerTotal > 21) {
         for (let i = 0; i < playerArray.length; i++) {
             if (playerArray[i] == 11) {
-                playerArray.splice(i, 1, 1)
                 playerTotal -= 11
                 playerTotal++
                 console.log(playerTotal)
