@@ -12,4 +12,5 @@ JS Library: Underscore.js
 
 JS Library: jQuery
 
+css-Grid: https://css-tricks.com/snippets/css/complete-guide-grid/
 #Version 2 revision

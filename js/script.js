@@ -97,6 +97,10 @@ $(document).ready(function () {
             $('#bust').text("House wins!");
         }
 
+        if (dealerTotal<playerTotal){
+            $('#bust').text("Player wins!");
+        }
+
         while (dealerTotal < 16 && playerTotal>dealerTotal) {
 
             dealerTotal = 0;
@@ -135,7 +139,4 @@ $(document).ready(function () {
             }
         }
     })
-
-
-
 })
