@@ -22,11 +22,11 @@ $(document).ready(function () {
         dealerTotal += dealerArray[i];
     }
 
-    $('#test3').text(dealerArray)
-    $('#test4').text(dealerTotal)
+    $('#dealer1').text(dealerArray)
+    $('#dealer2').text(dealerTotal)
 
-    $('#test1').text(playerArray)
-    $('#test2').text(playerTotal)
+    $('#player1').text(playerArray)
+    $('#player2').text(playerTotal)
 
     function playerCheck () {if (playerTotal > 21) {
         for (let i = 0; i < playerArray.length; i++) {
@@ -35,8 +35,8 @@ $(document).ready(function () {
                 playerTotal -= 11
                 playerTotal++
                 console.log(playerTotal)
-                $('#test1').text(playerArray);
-                $('#test2').text(playerTotal);
+                $('#player1').text(playerArray);
+                $('#player2').text(playerTotal);
                 return;
             }
         }
@@ -49,8 +49,8 @@ $(document).ready(function () {
                 dealerTotal -= 11
                 dealerTotal++
                 console.log(dealerTotal)
-                $('#test3').text(dealerArray);
-                $('#test4').text(dealerTotal);
+                $('#dealer1').text(dealerArray);
+                $('#dealer2').text(dealerTotal);
                 return;
             }
         }
@@ -68,8 +68,8 @@ $(document).ready(function () {
         for (let i = 0; i < playerArray.length; i++) {
             playerTotal += playerArray[i];
         }
-        $('#test1').text(playerArray);
-        $('#test2').text(playerTotal);
+        $('#player1').text(playerArray);
+        $('#player2').text(playerTotal);
         if (playerTotal > 21) {
             for (let i = 0; i < playerArray.length; i++) {
                 if (playerArray[i] == 11) {
@@ -77,8 +77,8 @@ $(document).ready(function () {
                     playerTotal -= 11
                     playerTotal++
                     console.log(playerTotal)
-                    $('#test1').text(playerArray);
-                    $('#test2').text(playerTotal);
+                    $('#player1').text(playerArray);
+                    $('#player2').text(playerTotal);
                 }
             }
             if (playerTotal > 21) {
@@ -89,6 +89,10 @@ $(document).ready(function () {
 
     $('#stand').on('click', function () {
 
+        if (dealerTotal>=16 && dealerTotal==playerTotal){
+            $('#bust').text("House and player have tied!")
+        }
+
         while (dealerTotal < 16 && playerTotal>dealerTotal) {
 
             dealerTotal = 0;
@@ -98,8 +102,8 @@ $(document).ready(function () {
             for (let i = 0; i < dealerArray.length; i++) {
                 dealerTotal += dealerArray[i];
             }
-            $('#test3').text(dealerArray);
-            $('#test4').text(dealerTotal);
+            $('#dealer1').text(dealerArray);
+            $('#dealer2').text(dealerTotal);
             if (dealerTotal > 21) {
                 for (let i = 0; i < dealerArray.length; i++) {
                     if (dealerArray[i] == 11) {
@@ -107,8 +111,8 @@ $(document).ready(function () {
                         dealerTotal -= 11
                         dealerTotal++
                         console.log(dealerTotal)
-                        $('#test3').text(dealerArray);
-                        $('#test4').text(dealerTotal);
+                        $('#dealer1').text(dealerArray);
+                        $('#dealer2').text(dealerTotal);
                     }
                 }
                 if (dealerTotal > 21) {

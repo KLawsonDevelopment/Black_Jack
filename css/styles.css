@@ -1,0 +1,26 @@
+.dealer {
+    color: blue;
+}
+
+.player {
+    color: red;
+}
+
+#bust {
+    color: gold;
+}
+
+/* body {
+    background: 
+} */
+
+#hit {
+    color: black;
+    background: red;
+}
+
+#stand {
+    color: black;
+    background: rgb(53, 53, 221);
+}
+
