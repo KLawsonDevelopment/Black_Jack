@@ -23,10 +23,10 @@ $(document).ready(function () {
     }
 
     $('#dealer1').text(dealerArray)
-    $('#dealer2').text(dealerTotal)
+    $('#dealer2').text("Total : " + dealerTotal)
 
     $('#player1').text(playerArray)
-    $('#player2').text(playerTotal)
+    $('#player2').text("Total : " + playerTotal);
 
     function playerCheck () {if (playerTotal > 21) {
         for (let i = 0; i < playerArray.length; i++) {
@@ -36,7 +36,7 @@ $(document).ready(function () {
                 playerTotal++
                 console.log(playerTotal)
                 $('#player1').text(playerArray);
-                $('#player2').text(playerTotal);
+                $('#player2').text("Total : " + playerTotal);
                 return;
             }
         }
@@ -50,7 +50,7 @@ $(document).ready(function () {
                 dealerTotal++
                 console.log(dealerTotal)
                 $('#dealer1').text(dealerArray);
-                $('#dealer2').text(dealerTotal);
+                $('#dealer2').text("Total : " + dealerTotal)
                 return;
             }
         }
@@ -69,7 +69,7 @@ $(document).ready(function () {
             playerTotal += playerArray[i];
         }
         $('#player1').text(playerArray);
-        $('#player2').text(playerTotal);
+        $('#player2').text("Total : " + playerTotal);
         if (playerTotal > 21) {
             for (let i = 0; i < playerArray.length; i++) {
                 if (playerArray[i] == 11) {
@@ -78,7 +78,7 @@ $(document).ready(function () {
                     playerTotal++
                     console.log(playerTotal)
                     $('#player1').text(playerArray);
-                    $('#player2').text(playerTotal);
+                    $('#player2').text("Total : " + playerTotal);
                 }
             }
             if (playerTotal > 21) {
@@ -111,7 +111,7 @@ $(document).ready(function () {
                 dealerTotal += dealerArray[i];
             }
             $('#dealer1').text(dealerArray);
-            $('#dealer2').text(dealerTotal);
+            $('#dealer2').text("Total : " + dealerTotal)
             if (dealerTotal > 21) {
                 for (let i = 0; i < dealerArray.length; i++) {
                     if (dealerArray[i] == 11) {
@@ -120,7 +120,7 @@ $(document).ready(function () {
                         dealerTotal++
                         console.log(dealerTotal)
                         $('#dealer1').text(dealerArray);
-                        $('#dealer2').text(dealerTotal);
+                        $('#dealer2').text("Total : " + dealerTotal)
                     }
                 }
                 if (dealerTotal > 21) {
