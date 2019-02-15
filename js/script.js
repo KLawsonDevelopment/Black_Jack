@@ -139,4 +139,7 @@ $(document).ready(function () {
             }
         }
     })
+    $('#reset').on('click', function(){
+        location.reload();
+    })
 })
