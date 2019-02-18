@@ -52,8 +52,8 @@ $(document).ready(function () {
             else {
                 playerTotal += parseInt(playerArray[i].charAt(0));
             }
-            console.log(playerTotal)
         }
+        return;
     }
 
     function dealerDraw() {
@@ -96,7 +96,7 @@ $(document).ready(function () {
     function playerCheck() {
         if (playerTotal > 21) {
             for (let i = 0; i < playerArray.length; i++) {
-                if (playerArray[i] == 11) {
+                if (playerArray[i] == 'Ace of Spades' || playerArray[i] == 'Ace of Clubs' || playerArray[i] == 'Ace of Diamonds' || playerArray[i] == 'Ace of Hearts'){
                     playerTotal -= 11
                     playerTotal++
                     console.log(playerTotal)
@@ -127,35 +127,27 @@ $(document).ready(function () {
     playerCheck();
     dealerCheck();
 
+    function playBustCheck() {
+        if (playerTotal>21){
+            $('#bust').text('You have busted! House wins!');
+        }
+
+    }
+
 
     $('#hit').on('click', function () {
-        playerTotal = 0;
-
-        // playerArray.push(shuffledDeck[Math.floor(Math.random() * shuffledDeck.length)])
-
-        for (let i = 0; i < playerArray.length; i++) {
-            playerTotal += playerArray[i];
-        }
-        $('#player1').text(playerArray);
+        playerDraw();
+        playerCheck();
+        $('#player1').text(playerArray)
         $('#player2').text("Total : " + playerTotal);
-        if (playerTotal > 21) {
-            for (let i = 0; i < playerArray.length; i++) {
-                if (playerArray[i] == 11) {
-                    playerArray.splice(i, 1, 1)
-                    playerTotal -= 11
-                    playerTotal++
-                    console.log(playerTotal)
-                    $('#player1').text(playerArray);
-                    $('#player2').text("Total : " + playerTotal);
-                }
-            }
-            if (playerTotal > 21) {
-                $('#bust').text("You have busted!");
-            }
-        }
+        playBustCheck();
     })
 
     $('#stand').on('click', function () {
+
+        while (dealerTotal < 16 && playerTotal > dealerTotal) {
+            dealerDraw();
+        }
 
         if (dealerTotal >= 16 && dealerTotal == playerTotal) {
             $('#bust').text("House and player have tied!")
@@ -167,44 +159,6 @@ $(document).ready(function () {
 
         if (dealerTotal < playerTotal) {
             $('#bust').text("Player wins!");
-        }
-
-        while (dealerTotal < 16 && playerTotal > dealerTotal) {
-
-            dealerTotal = 0;
-            // dealerArray.push(shuffledDeck[Math.floor(Math.random() * shuffledDeck.length)])
-            console.log(dealerArray)
-
-            for (let i = 0; i < dealerArray.length; i++) {
-                dealerTotal += dealerArray[i];
-            }
-            $('#dealer1').text(dealerArray);
-            $('#dealer2').text("Total : " + dealerTotal)
-            if (dealerTotal > 21) {
-                for (let i = 0; i < dealerArray.length; i++) {
-                    if (dealerArray[i] == 11) {
-                        dealerArray.splice(i, 1, 1)
-                        dealerTotal -= 11
-                        dealerTotal++
-                        console.log(dealerTotal)
-                        $('#dealer1').text(dealerArray);
-                        $('#dealer2').text("Total : " + dealerTotal)
-                    }
-                }
-                if (dealerTotal > 21) {
-                    $('#bust').text("House has busted! You won!");
-                }
-            }
-            else if (dealerTotal >= 16 && dealerTotal > playerTotal) {
-                $('#bust').text("House wins!")
-            }
-
-            else if (dealerTotal >= 16 && playerTotal > dealerTotal) {
-                $('#bust').text("You won!")
-            }
-            else if (dealerTotal == playerTotal) {
-                $('#bust').text("House and player have tied!")
-            }
         }
     })
     $('#reset').on('click', function () {

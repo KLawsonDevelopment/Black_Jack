@@ -50,7 +50,7 @@ body {
 #player1 {
     grid-row: 4;
     grid-column: 5 / 6;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 #player2 {
@@ -61,7 +61,7 @@ body {
 #dealer1{
     grid-row: 2;
     grid-column: 5/6;
-    font-size:40px;
+    font-size:30px;
 }
 
 #dealer2{
