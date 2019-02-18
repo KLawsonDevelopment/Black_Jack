@@ -28,6 +28,13 @@ body {
     grid-template-columns: 200px 200px 200px 200px 200px 200px 200px 200px;
 }
 
+.deck {
+    grid-row: 2;
+    grid-column: 2;
+    height: 240px;
+    width: 200px;
+}
+
 #hit {
     color: black;
     background: red;
