@@ -34,9 +34,8 @@ $(document).ready(function () {
 
     function playerDraw() {
         playerArray.push(deck1.deck[Math.floor(Math.random() * deck1.deck.length)])
-        playerTotal=0;
+        playerTotal = 0;
         for (let i = 0; i < playerArray.length; i++) {
-            console.log(playerArray[i]);
             if (playerArray[i] == 'Ace of Spades' || playerArray[i] == 'Ace of Clubs' || playerArray[i] == 'Ace of Diamonds' || playerArray[i] == 'Ace of Hearts') {
                 playerTotal += 11;
             }
@@ -58,7 +57,7 @@ $(document).ready(function () {
 
     function dealerDraw() {
         dealerArray.push(deck1.deck[Math.floor(Math.random() * deck1.deck.length)])
-        dealerTotal=0;
+        dealerTotal = 0;
         for (let i = 0; i < dealerArray.length; i++) {
             console.log(dealerArray[i]);
             if (dealerArray[i] == 'Ace of Spades' || dealerArray[i] == 'Ace of Clubs' || dealerArray[i] == 'Ace of Diamonds' || dealerArray[i] == 'Ace of Hearts') {
@@ -76,16 +75,15 @@ $(document).ready(function () {
             else {
                 dealerTotal += parseInt(dealerArray[i].charAt(0));
             }
-
-            console.log(dealerTotal)
         }
+        return;
     }
 
     playerDraw();
     playerDraw();
     dealerDraw();
     dealerDraw();
-    
+
 
     $('#dealer1').text(dealerArray)
     $('#dealer2').text("Total : " + dealerTotal)
@@ -96,7 +94,7 @@ $(document).ready(function () {
     function playerCheck() {
         if (playerTotal > 21) {
             for (let i = 0; i < playerArray.length; i++) {
-                if (playerArray[i] == 'Ace of Spades' || playerArray[i] == 'Ace of Clubs' || playerArray[i] == 'Ace of Diamonds' || playerArray[i] == 'Ace of Hearts'){
+                if (playerArray[i] == 'Ace of Spades' || playerArray[i] == 'Ace of Clubs' || playerArray[i] == 'Ace of Diamonds' || playerArray[i] == 'Ace of Hearts') {
                     playerTotal -= 11
                     playerTotal++
                     console.log(playerTotal)
@@ -111,13 +109,11 @@ $(document).ready(function () {
     function dealerCheck() {
         if (dealerTotal > 21) {
             for (let i = 0; i < dealerArray.length; i++) {
-                if (dealerArray[i] == 11) {
-                    dealerArray.splice(i, 1, 1)
-                    dealerTotal -= 11
-                    dealerTotal++
-                    console.log(dealerTotal)
+                if (dealerArray[i] == 'Ace of Spades' || dealerArray[i] == 'Ace of Clubs' || dealerArray[i] == 'Ace of Diamonds' || dealerArray[i] == 'Ace of Hearts') {
+                    dealerTotal -= 11;
+                    dealerTotal++;
                     $('#dealer1').text(dealerArray);
-                    $('#dealer2').text("Total : " + dealerTotal)
+                    $('#dealer2').text("Total: " + dealerTotal);
                     return;
                 }
             }
@@ -128,10 +124,16 @@ $(document).ready(function () {
     dealerCheck();
 
     function playBustCheck() {
-        if (playerTotal>21){
+        if (playerTotal > 21) {
             $('#bust').text('You have busted! House wins!');
         }
 
+    }
+
+    function dealBustCheck() {
+        if (dealerTotal > 21){
+            $('#bust').text('House has busted! Player wins!')
+        }
     }
 
 
@@ -147,19 +149,28 @@ $(document).ready(function () {
 
         while (dealerTotal < 16 && playerTotal > dealerTotal) {
             dealerDraw();
+            dealerCheck();
+            $('#dealer1').text(dealerArray);
+            $('#dealer2').text("Total : " + dealerTotal);
         }
 
-        if (dealerTotal >= 16 && dealerTotal == playerTotal) {
+        if (dealerTotal>21) {
+            dealBustCheck();
+        }
+
+        else if (dealerTotal >= 16 && dealerTotal == playerTotal) {
             $('#bust').text("House and player have tied!")
         }
 
-        if (dealerTotal > playerTotal) {
+        else if (dealerTotal >= 16 && dealerTotal > playerTotal) {
             $('#bust').text("House wins!");
         }
 
-        if (dealerTotal < playerTotal) {
+        else if (dealerTotal >= 16 && dealerTotal < playerTotal) {
             $('#bust').text("Player wins!");
         }
+
+        
     })
     $('#reset').on('click', function () {
         location.reload();
