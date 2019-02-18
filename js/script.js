@@ -18,7 +18,6 @@ $(document).ready(function () {
     }
 
     var deck1 = new Deck();
-    console.log(deck1);
 
 
     var playerArray = []
@@ -59,7 +58,6 @@ $(document).ready(function () {
         dealerArray.push(deck1.deck[Math.floor(Math.random() * deck1.deck.length)])
         dealerTotal = 0;
         for (let i = 0; i < dealerArray.length; i++) {
-            console.log(dealerArray[i]);
             if (dealerArray[i] == 'Ace of Spades' || dealerArray[i] == 'Ace of Clubs' || dealerArray[i] == 'Ace of Diamonds' || dealerArray[i] == 'Ace of Hearts') {
                 dealerTotal += 11;
             }
@@ -97,7 +95,6 @@ $(document).ready(function () {
                 if (playerArray[i] == 'Ace of Spades' || playerArray[i] == 'Ace of Clubs' || playerArray[i] == 'Ace of Diamonds' || playerArray[i] == 'Ace of Hearts') {
                     playerTotal -= 11
                     playerTotal++
-                    console.log(playerTotal)
                     $('#player1').text(playerArray);
                     $('#player2').text("Total : " + playerTotal);
                     return;
