@@ -459,6 +459,8 @@ $(document).ready(function () {
     function playBustCheck() {
         if (playerTotal > 21) {
             $('#bust').text('You have busted! House wins!');
+            $('#hit').prop("disabled",true);
+            $('#stand').prop("disabled", true);
         }
 
     }
@@ -466,6 +468,8 @@ $(document).ready(function () {
     function dealBustCheck() {
         if (dealerTotal > 21) {
             $('#bust').text('House has busted! Player wins!')
+            $('#hit').prop("disabled",true);
+            $('#stand').prop("disabled", true);
         }
     }
 
@@ -497,14 +501,20 @@ $(document).ready(function () {
 
         else if (dealerTotal >= 16 && dealerTotal == playerTotal) {
             $('#bust').text("House and player have tied!")
+            $('#hit').prop("disabled",true);
+            $('#stand').prop("disabled", true);
         }
 
         else if (dealerTotal >= 16 && dealerTotal > playerTotal) {
             $('#bust').text("House wins!");
+            $('#hit').prop("disabled",true);
+            $('#stand').prop("disabled", true);
         }
 
         else if (dealerTotal >= 16 && dealerTotal < playerTotal) {
             $('#bust').text("Player wins!");
+            $('#hit').prop("disabled",true);
+            $('#stand').prop("disabled", true);
         }
 
 
