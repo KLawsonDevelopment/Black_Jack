@@ -3,8 +3,6 @@ $(document).ready(function () {
 
     //Took this Deck class from https://wsvincent.com/javascript-object-oriented-deck-cards/
 
-
-
     class Deck {
         constructor(deck) {
             this.deck = [];
