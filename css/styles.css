@@ -78,6 +78,7 @@ body {
 
 
 #player2 {
+    color: white;
     grid-row: 5;
     grid-column: 6;
     margin: 5px;
@@ -87,6 +88,7 @@ body {
 
 
 #dealer2{
+    color: white;
     grid-row: 1;
     grid-column: 6;
     margin: 5px;
