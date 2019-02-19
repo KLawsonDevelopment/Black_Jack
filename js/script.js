@@ -526,6 +526,32 @@ $(document).ready(function () {
     })
 
     anime({
-        
+        targets: '.dealcard1',
+        translateX:420,
+        delay: anime.stagger(100 ,{start: 500})
       });
+
+    anime({
+        targets:'.dealcard2',
+        translateX:630,
+        delay: anime.stagger(100, {start:800})
+    })
+
+    anime({
+        targets:'.dealcard3',
+        translateX:840,
+        delay: anime.stagger(100, {start:1100})
+    })
+
+    anime({
+        targets:'.dealcard4',
+        translateX:1050,
+        delay: anime.stagger(100, {start:1400})
+    })
+
+    anime({
+        targets:'.dealcard5',
+        translateX:1260,
+        delay: anime.stagger(100, {start:1700})
+    })
 })
