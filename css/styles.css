@@ -48,10 +48,12 @@ body {
 }
 
 .deck {
+    z-index: 1;
     grid-row: 2;
     grid-column: 1;
     height: 240px;
     width: 200px;
+
 }
 
 #hit {
@@ -150,36 +152,36 @@ body {
 }
 
 .playcard1{
-    grid-row: 4;
-    grid-column: 3;
+    grid-row: 2;
+    grid-column: 1;
     height: 240px;
     width: 200px;
 }
 
 .playcard2{
-    grid-row: 4;
-    grid-column: 4;
+    grid-row: 2;
+    grid-column: 1;
     height: 240px;
     width: 200px;
 }
 
 .playcard3{
-    grid-row: 4;
-    grid-column: 5;
+    grid-row: 2;
+    grid-column: 1;
     height: 240px;
     width: 200px;
 }
 
 .playcard4{
-    grid-row: 4;
-    grid-column: 6;
+    grid-row: 2;
+    grid-column: 1;
     height: 240px;
     width: 200px;
 }
 
 .playcard5{
-    grid-row: 4;
-    grid-column: 7;
+    grid-row: 2;
+    grid-column: 1;
     height: 240px;
     width: 200px;
 }

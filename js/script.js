@@ -1,6 +1,6 @@
 $(document).ready(function () {
     console.log("jQuery active")
-    
+
     //Took this Deck class from https://wsvincent.com/javascript-object-oriented-deck-cards/
 
 
@@ -10,7 +10,7 @@ $(document).ready(function () {
             this.deck = [];
 
             const suits = ['Hearts', 'Spades', 'Diamonds', 'Clubs'];
-            const values = ['Ace', 2, 3, 4, 5, 6, 7, 8, 9, 10,  'Jack', 'Queen', 'King'];
+            const values = ['Ace', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King'];
 
             for (let suit in suits) {
                 for (let value in values) {
@@ -62,7 +62,7 @@ $(document).ready(function () {
                 playerTotal += 10;
             }
             else {
-                playerTotal += parseInt(playerArray[i].substring(0,2));
+                playerTotal += parseInt(playerArray[i].substring(0, 2));
             }
         }
         return;
@@ -85,7 +85,7 @@ $(document).ready(function () {
                 dealerTotal += 10;
             }
             else {
-                dealerTotal += parseInt(dealerArray[i].substring(0,2));
+                dealerTotal += parseInt(dealerArray[i].substring(0, 2));
             }
         }
         return;
@@ -461,7 +461,7 @@ $(document).ready(function () {
     function playBustCheck() {
         if (playerTotal > 21) {
             $('#bust').text('You have busted! House wins!');
-            $('#hit').prop("disabled",true);
+            $('#hit').prop("disabled", true);
             $('#stand').prop("disabled", true);
         }
 
@@ -470,7 +470,7 @@ $(document).ready(function () {
     function dealBustCheck() {
         if (dealerTotal > 21) {
             $('#bust').text('House has busted! Player wins!')
-            $('#hit').prop("disabled",true);
+            $('#hit').prop("disabled", true);
             $('#stand').prop("disabled", true);
         }
     }
@@ -503,19 +503,19 @@ $(document).ready(function () {
 
         else if (dealerTotal >= 16 && dealerTotal == playerTotal) {
             $('#bust').text("House and player have tied!")
-            $('#hit').prop("disabled",true);
+            $('#hit').prop("disabled", true);
             $('#stand').prop("disabled", true);
         }
 
         else if (dealerTotal >= 16 && dealerTotal > playerTotal) {
             $('#bust').text("House wins!");
-            $('#hit').prop("disabled",true);
+            $('#hit').prop("disabled", true);
             $('#stand').prop("disabled", true);
         }
 
         else if (dealerTotal >= 16 && dealerTotal < playerTotal) {
             $('#bust').text("Player wins!");
-            $('#hit').prop("disabled",true);
+            $('#hit').prop("disabled", true);
             $('#stand').prop("disabled", true);
         }
 
@@ -527,31 +527,66 @@ $(document).ready(function () {
 
     anime({
         targets: '.dealcard1',
-        translateX:420,
-        delay: anime.stagger(100 ,{start: 500})
-      });
+        translateX: 420,
+        delay: anime.stagger(100, { start: 500 })
+    });
 
     anime({
-        targets:'.dealcard2',
-        translateX:630,
-        delay: anime.stagger(100, {start:800})
+        targets: '.dealcard2',
+        translateX: 630,
+        delay: anime.stagger(100, { start: 800 })
     })
 
     anime({
-        targets:'.dealcard3',
-        translateX:840,
-        delay: anime.stagger(100, {start:1100})
+        targets: '.dealcard3',
+        translateX: 840,
+        delay: anime.stagger(100, { start: 1100 })
     })
 
     anime({
-        targets:'.dealcard4',
-        translateX:1050,
-        delay: anime.stagger(100, {start:1400})
+        targets: '.dealcard4',
+        translateX: 1050,
+        delay: anime.stagger(100, { start: 1400 })
     })
 
     anime({
-        targets:'.dealcard5',
-        translateX:1260,
-        delay: anime.stagger(100, {start:1700})
+        targets: '.dealcard5',
+        translateX: 1260,
+        delay: anime.stagger(100, { start: 1700 })
+    })
+
+    anime({
+        targets: '.playcard1',
+        translateY: 375,
+        translateX: 420,
+        delay: anime.stagger(100, { start: 2000 })
+    })
+
+    anime({
+        targets: '.playcard2',
+        translateY: 375,
+        translateX: 630,
+        delay: anime.stagger(100, { start: 2300 })
+    })
+
+    anime({
+        targets: '.playcard3',
+        translateY: 375,
+        translateX: 840,
+        delay: anime.stagger(100, { start: 2600 })
+    })
+
+    anime({
+        targets: '.playcard4',
+        translateY: 375,
+        translateX: 1050,
+        delay: anime.stagger(100, { start: 2900 })
+    })
+
+    anime({
+        targets: '.playcard5',
+        translateY: 375,
+        translateX: 1260,
+        delay: anime.stagger(100, { start: 3200 })
     })
 })
