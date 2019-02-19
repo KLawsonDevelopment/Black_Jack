@@ -1,72 +1,100 @@
 .dealer {
-    color: blue;
+    color: white;
+    background-color: rgb(53, 53, 221);
     grid-row: 1;
     grid-column-start: 5;
     grid-column-end: 6;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-emphasis-position: center;
+    justify-items: center;
+    padding: 10px;
 }
 
 .player {
-    color: red;
+    color: white;
+    background-color: red;
     grid-row: 5;
     grid-column-start: 5;
     grid-column-end: 6;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-emphasis-position: center;
+    justify-items: center;
+    padding: 10px;
 }
 
 #bust {
     color: gold;
+    font-size:35px;
     grid-row: 3;
-    grid-column: 5 / 6;
+    grid-column: 4 / 7;
+    display: flex;
+    align-content: center;
+    justify-content: center;
     text-emphasis-position: center;
     justify-items: stretch;
 }
 
 body {
-    background: green;
+    background: #076324;
+    opacity: .8;
     display: grid;
     align-items: center;
-    grid-template-rows: 120px 240px 120px 240px 120px;
-    grid-template-columns: 200px 200px 200px 200px 200px 200px 200px 200px;
+    grid-template-rows: 120px 245px 130px 245px 120px;
+    grid-template-columns: 210px 210px 210px 210px 210px 210px 210px 210px;
+}
+
+.deck {
+    z-index: 1;
+    grid-row: 2;
+    grid-column: 1;
+    height: 240px;
+    width: 200px;
+
 }
 
 #hit {
-    color: black;
+    color: white;
     background: red;
-    grid-row-start: 1;
+    border: 1px solid white;
+    grid-row-start: 3;
     grid-column: 1;
     font-size: 35px;
     padding: 40px;
 }
 
 #stand {
-    color: black;
+    color: white;
     background: rgb(53, 53, 221);
-    grid-row: 2;
+    border: 1px solid white;
+    grid-row: 4;
     grid-column: 1;
     font-size: 35px;
     padding: 40px;
     align-self: baseline
 }
 
-#player1 {
-    grid-row: 4;
-    grid-column: 5 / 6;
-    font-size: 40px;
-}
+
 
 #player2 {
+    color: white;
     grid-row: 5;
     grid-column: 6;
+    margin: 5px;
+    font-size: 25px;
 }
 
-#dealer1{
-    grid-row: 2;
-    grid-column: 5/6;
-    font-size:40px;
-}
+
 
 #dealer2{
+    color: white;
     grid-row: 1;
     grid-column: 6;
+    margin: 5px;
+    font-size: 25px;
 }
 
 #reset {
@@ -76,4 +104,85 @@ body {
     font-size: 35px;
     color: white;
     background: black;
+    opacity: .7;
 }
+
+
+
+
+
+.dealcard1{
+    grid-row: 2;
+    grid-column: 1;
+    height: 240px;
+    width: 200px;
+    padding: 5px;
+}
+
+.dealcard2{
+    grid-row: 2;
+    grid-column: 1;
+    height: 240px;
+    width: 200px;
+    padding: 5px;
+}
+
+.dealcard3{
+    grid-row: 2;
+    grid-column: 1;
+    height: 240px;
+    width: 200px;
+    padding: 5px;
+}
+
+.dealcard4{
+    grid-row: 2;
+    grid-column: 1;
+    height: 240px;
+    width: 200px;
+    padding: 5px;
+}
+
+.dealcard5{
+    grid-row: 2;
+    grid-column: 1;
+    height: 240px;
+    width: 200px;
+    padding: 5px;
+}
+
+.playcard1{
+    grid-row: 2;
+    grid-column: 1;
+    height: 240px;
+    width: 200px;
+}
+
+.playcard2{
+    grid-row: 2;
+    grid-column: 1;
+    height: 240px;
+    width: 200px;
+}
+
+.playcard3{
+    grid-row: 2;
+    grid-column: 1;
+    height: 240px;
+    width: 200px;
+}
+
+.playcard4{
+    grid-row: 2;
+    grid-column: 1;
+    height: 240px;
+    width: 200px;
+}
+
+.playcard5{
+    grid-row: 2;
+    grid-column: 1;
+    height: 240px;
+    width: 200px;
+}
+
