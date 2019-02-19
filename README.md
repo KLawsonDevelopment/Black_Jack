@@ -1,6 +1,10 @@
 #Descritpion
 
+
+
 #App
+
+https://nekublackjack.netlify.com/ //may lag upon first open//
 
 #Trello
 
