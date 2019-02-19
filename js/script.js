@@ -251,7 +251,6 @@ $(document).ready(function () {
 
     function dealCardFlip(dealcard) {
         for (let i = 0; i < dealcard.length; i++) {
-            console.log(dealerArray[i])
             if (dealerArray[i] == 'Ace of Spades') {
                 $(dealcard[i]).attr('src', '/JPEG/AS.jpg');
             }
