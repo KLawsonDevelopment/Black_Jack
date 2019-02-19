@@ -1,6 +1,9 @@
 $(document).ready(function () {
     console.log("jQuery active")
+    
     //Took this Deck class from https://wsvincent.com/javascript-object-oriented-deck-cards/
+
+
 
     class Deck {
         constructor(deck) {
@@ -521,4 +524,8 @@ $(document).ready(function () {
     $('#reset').on('click', function () {
         location.reload();
     })
+
+    anime({
+        
+      });
 })
