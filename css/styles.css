@@ -30,7 +30,7 @@ body {
 
 .deck {
     grid-row: 2;
-    grid-column: 2;
+    grid-column: 1;
     height: 240px;
     width: 200px;
 }
@@ -38,7 +38,7 @@ body {
 #hit {
     color: black;
     background: red;
-    grid-row-start: 1;
+    grid-row-start: 3;
     grid-column: 1;
     font-size: 35px;
     padding: 40px;
@@ -47,7 +47,7 @@ body {
 #stand {
     color: black;
     background: rgb(53, 53, 221);
-    grid-row: 2;
+    grid-row: 4;
     grid-column: 1;
     font-size: 35px;
     padding: 40px;
@@ -83,4 +83,74 @@ body {
     font-size: 35px;
     color: white;
     background: black;
+}
+
+.dealcard1{
+    grid-row: 2;
+    grid-column: 3;
+    height: 240px;
+    width: 200px;
+}
+
+.dealcard2{
+    grid-row: 2;
+    grid-column: 4;
+    height: 240px;
+    width: 200px;
+}
+
+.dealcard3{
+    grid-row: 2;
+    grid-column: 5;
+    height: 240px;
+    width: 200px;
+}
+
+.dealcard4{
+    grid-row: 2;
+    grid-column: 6;
+    height: 240px;
+    width: 200px;
+}
+
+.dealcard5{
+    grid-row: 2;
+    grid-column: 7;
+    height: 240px;
+    width: 200px;
+}
+
+.playcard1{
+    grid-row: 4;
+    grid-column: 3;
+    height: 240px;
+    width: 200px;
+}
+
+.playcard2{
+    grid-row: 4;
+    grid-column: 4;
+    height: 240px;
+    width: 200px;
+}
+
+.playcard3{
+    grid-row: 4;
+    grid-column: 5;
+    height: 240px;
+    width: 200px;
+}
+
+.playcard4{
+    grid-row: 4;
+    grid-column: 6;
+    height: 240px;
+    width: 200px;
+}
+
+.playcard5{
+    grid-row: 4;
+    grid-column: 7;
+    height: 240px;
+    width: 200px;
 }

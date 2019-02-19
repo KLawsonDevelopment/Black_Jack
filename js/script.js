@@ -22,10 +22,8 @@ $(document).ready(function () {
 
     var playerArray = []
     var playerTotal = 0
-    var playAddTotal = 0;
     var dealerArray = []
     var dealerTotal = 0
-    var dealAddTotal = 0;
 
 
 
@@ -83,10 +81,10 @@ $(document).ready(function () {
     dealerDraw();
 
 
-    $('#dealer1').text(dealerArray)
+
     $('#dealer2').text("Total : " + dealerTotal)
 
-    $('#player1').text(playerArray)
+
     $('#player2').text("Total : " + playerTotal);
 
     function playerCheck() {
