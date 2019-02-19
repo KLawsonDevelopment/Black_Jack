@@ -90,7 +90,6 @@ $(document).ready(function () {
 
     function playCardFlip(playcard) {
         for (let i = 0; i < playcard.length; i++) {
-            console.log(playerArray[i])
             if (playerArray[i] == 'Ace of Spades') {
                 $(playcard[i]).attr('src', '/JPEG/AS.jpg');
             }
@@ -252,7 +251,7 @@ $(document).ready(function () {
 
     function dealCardFlip(dealcard) {
         for (let i = 0; i < dealcard.length; i++) {
-
+            console.log(dealerArray[i])
             if (dealerArray[i] == 'Ace of Spades') {
                 $(dealcard[i]).attr('src', '/JPEG/AS.jpg');
             }
@@ -276,6 +275,138 @@ $(document).ready(function () {
             }
             else if (dealerArray[i] == '2 of Hearts') {
                 $(dealcard[i]).attr('src', '/JPEG/2H.jpg');
+            }
+            else if (dealerArray[i] == '3 of Spades') {
+                $(dealcard[i]).attr('src', '/JPEG/3S.jpg');
+            }
+            else if (dealerArray[i] == '3 of Diamonds') {
+                $(dealcard[i]).attr('src', '/JPEG/3D.jpg');
+            }
+            else if (dealerArray[i] == '3 of Clubs') {
+                $(dealcard[i]).attr('src', '/JPEG/3C.jpg');
+            }
+            else if (dealerArray[i] == '3 of Hearts') {
+                $(dealcard[i]).attr('src', '/JPEG/3H.jpg');
+            }
+            else if (dealerArray[i] == '4 of Spades') {
+                $(dealcard[i]).attr('src', '/JPEG/4S.jpg');
+            }
+            else if (dealerArray[i] == '4 of Diamonds') {
+                $(dealcard[i]).attr('src', '/JPEG/4D.jpg');
+            }
+            else if (dealerArray[i] == '4 of Clubs') {
+                $(dealcard[i]).attr('src', '/JPEG/4C.jpg');
+            }
+            else if (dealerArray[i] == '4 of Hearts') {
+                $(dealcard[i]).attr('src', '/JPEG/4H.jpg');
+            }
+            else if (dealerArray[i] == '5 of Spades') {
+                $(dealcard[i]).attr('src', '/JPEG/5S.jpg');
+            }
+            else if (dealerArray[i] == '5 of Diamonds') {
+                $(dealcard[i]).attr('src', '/JPEG/5D.jpg');
+            }
+            else if (dealerArray[i] == '5 of Clubs') {
+                $(dealcard[i]).attr('src', '/JPEG/5C.jpg');
+            }
+            else if (dealerArray[i] == '5 of Hearts') {
+                $(dealcard[i]).attr('src', '/JPEG/5H.jpg');
+            }
+            else if (dealerArray[i] == '6 of Spades') {
+                $(dealcard[i]).attr('src', '/JPEG/6S.jpg');
+            }
+            else if (dealerArray[i] == '6 of Diamonds') {
+                $(dealcard[i]).attr('src', '/JPEG/6D.jpg');
+            }
+            else if (dealerArray[i] == '6 of Clubs') {
+                $(dealcard[i]).attr('src', '/JPEG/6C.jpg');
+            }
+            else if (dealerArray[i] == '6 of Hearts') {
+                $(dealcard[i]).attr('src', '/JPEG/6H.jpg');
+            }
+            else if (dealerArray[i] == '7 of Spades') {
+                $(dealcard[i]).attr('src', '/JPEG/7S.jpg');
+            }
+            else if (dealerArray[i] == '7 of Diamonds') {
+                $(dealcard[i]).attr('src', '/JPEG/7D.jpg');
+            }
+            else if (dealerArray[i] == '7 of Clubs') {
+                $(dealcard[i]).attr('src', '/JPEG/7C.jpg');
+            }
+            else if (dealerArray[i] == '7 of Hearts') {
+                $(dealcard[i]).attr('src', '/JPEG/7H.jpg');
+            }
+            else if (dealerArray[i] == '8 of Spades') {
+                $(dealcard[i]).attr('src', '/JPEG/8S.jpg');
+            }
+            else if (dealerArray[i] == '8 of Diamonds') {
+                $(dealcard[i]).attr('src', '/JPEG/8D.jpg');
+            }
+            else if (dealerArray[i] == '8 of Clubs') {
+                $(dealcard[i]).attr('src', '/JPEG/8C.jpg');
+            }
+            else if (dealerArray[i] == '8 of Hearts') {
+                $(dealcard[i]).attr('src', '/JPEG/8H.jpg');
+            }
+            else if (dealerArray[i] == '9 of Spades') {
+                $(dealcard[i]).attr('src', '/JPEG/9S.jpg');
+            }
+            else if (dealerArray[i] == '9 of Diamonds') {
+                $(dealcard[i]).attr('src', '/JPEG/9D.jpg');
+            }
+            else if (dealerArray[i] == '9 of Clubs') {
+                $(dealcard[i]).attr('src', '/JPEG/9C.jpg');
+            }
+            else if (dealerArray[i] == '9 of Hearts') {
+                $(dealcard[i]).attr('src', '/JPEG/9H.jpg');
+            }
+            else if (dealerArray[i] == '10 of Spades') {
+                $(dealcard[i]).attr('src', '/JPEG/10S.jpg');
+            }
+            else if (dealerArray[i] == '10 of Diamonds') {
+                $(dealcard[i]).attr('src', '/JPEG/10D.jpg');
+            }
+            else if (dealerArray[i] == '10 of Clubs') {
+                $(dealcard[i]).attr('src', '/JPEG/10C.jpg');
+            }
+            else if (dealerArray[i] == '10 of Hearts') {
+                $(dealcard[i]).attr('src', '/JPEG/10H.jpg');
+            }
+            else if (dealerArray[i] == 'Jack of Spades') {
+                $(dealcard[i]).attr('src', '/JPEG/JS.jpg');
+            }
+            else if (dealerArray[i] == 'Jack of Diamonds') {
+                $(dealcard[i]).attr('src', '/JPEG/JD.jpg');
+            }
+            else if (dealerArray[i] == 'Jack of Clubs') {
+                $(dealcard[i]).attr('src', '/JPEG/JC.jpg');
+            }
+            else if (dealerArray[i] == 'Jack of Hearts') {
+                $(dealcard[i]).attr('src', '/JPEG/JH.jpg');
+            }
+            else if (dealerArray[i] == 'Queen of Spades') {
+                $(dealcard[i]).attr('src', '/JPEG/QS.jpg');
+            }
+            else if (dealerArray[i] == 'Queen of Diamonds') {
+                $(dealcard[i]).attr('src', '/JPEG/QD.jpg');
+            }
+            else if (dealerArray[i] == 'Queen of Clubs') {
+                $(dealcard[i]).attr('src', '/JPEG/QC.jpg');
+            }
+            else if (dealerArray[i] == 'Queen of Hearts') {
+                $(dealcard[i]).attr('src', '/JPEG/QH.jpg');
+            }
+            else if (dealerArray[i] == 'King of Spades') {
+                $(dealcard[i]).attr('src', '/JPEG/KS.jpg');
+            }
+            else if (dealerArray[i] == 'King of Diamonds') {
+                $(dealcard[i]).attr('src', '/JPEG/KD.jpg');
+            }
+            else if (dealerArray[i] == 'King of Clubs') {
+                $(dealcard[i]).attr('src', '/JPEG/KC.jpg');
+            }
+            else if (dealerArray[i] == 'King of Hearts') {
+                $(dealcard[i]).attr('src', '/JPEG/KH.jpg');
             }
 
         }

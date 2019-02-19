@@ -4,6 +4,12 @@
     grid-row: 1;
     grid-column-start: 5;
     grid-column-end: 6;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-emphasis-position: center;
+    justify-items: center;
+    padding: 10px;
 }
 
 .player {
@@ -12,6 +18,12 @@
     grid-row: 5;
     grid-column-start: 5;
     grid-column-end: 6;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-emphasis-position: center;
+    justify-items: center;
+    padding: 10px;
 }
 
 #bust {
@@ -31,8 +43,8 @@ body {
     opacity: .8;
     display: grid;
     align-items: center;
-    grid-template-rows: 120px 240px 120px 240px 120px;
-    grid-template-columns: 200px 200px 200px 200px 200px 200px 200px 200px;
+    grid-template-rows: 120px 245px 130px 245px 120px;
+    grid-template-columns: 210px 210px 210px 210px 210px 210px 210px 210px;
 }
 
 .deck {
@@ -45,6 +57,7 @@ body {
 #hit {
     color: white;
     background: red;
+    border: 1px solid white;
     grid-row-start: 3;
     grid-column: 1;
     font-size: 35px;
@@ -54,6 +67,7 @@ body {
 #stand {
     color: white;
     background: rgb(53, 53, 221);
+    border: 1px solid white;
     grid-row: 4;
     grid-column: 1;
     font-size: 35px;
@@ -61,26 +75,22 @@ body {
     align-self: baseline
 }
 
-#player1 {
-    grid-row: 4;
-    grid-column: 5 / 6;
-    font-size: 30px;
-}
+
 
 #player2 {
     grid-row: 5;
     grid-column: 6;
+    margin: 5px;
+    font-size: 25px;
 }
 
-#dealer1{
-    grid-row: 2;
-    grid-column: 5/6;
-    font-size:30px;
-}
+
 
 #dealer2{
     grid-row: 1;
     grid-column: 6;
+    margin: 5px;
+    font-size: 25px;
 }
 
 #reset {
@@ -98,6 +108,7 @@ body {
     grid-column: 3;
     height: 240px;
     width: 200px;
+    padding: 5px;
 }
 
 .dealcard2{
@@ -105,6 +116,7 @@ body {
     grid-column: 4;
     height: 240px;
     width: 200px;
+    padding: 5px;
 }
 
 .dealcard3{
@@ -112,6 +124,7 @@ body {
     grid-column: 5;
     height: 240px;
     width: 200px;
+    padding: 5px;
 }
 
 .dealcard4{
@@ -119,6 +132,7 @@ body {
     grid-column: 6;
     height: 240px;
     width: 200px;
+    padding: 5px;
 }
 
 .dealcard5{
@@ -126,6 +140,7 @@ body {
     grid-column: 7;
     height: 240px;
     width: 200px;
+    padding: 5px;
 }
 
 .playcard1{
