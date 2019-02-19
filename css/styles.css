@@ -1,12 +1,14 @@
 .dealer {
-    color: blue;
+    color: white;
+    background-color: rgb(53, 53, 221);
     grid-row: 1;
     grid-column-start: 5;
     grid-column-end: 6;
 }
 
 .player {
-    color: red;
+    color: white;
+    background-color: red;
     grid-row: 5;
     grid-column-start: 5;
     grid-column-end: 6;
@@ -14,14 +16,19 @@
 
 #bust {
     color: gold;
+    font-size:35px;
     grid-row: 3;
-    grid-column: 5 / 6;
+    grid-column: 4 / 7;
+    display: flex;
+    align-content: center;
+    justify-content: center;
     text-emphasis-position: center;
     justify-items: stretch;
 }
 
 body {
-    background: green;
+    background: #076324;
+    opacity: .8;
     display: grid;
     align-items: center;
     grid-template-rows: 120px 240px 120px 240px 120px;
@@ -36,7 +43,7 @@ body {
 }
 
 #hit {
-    color: black;
+    color: white;
     background: red;
     grid-row-start: 3;
     grid-column: 1;
@@ -45,7 +52,7 @@ body {
 }
 
 #stand {
-    color: black;
+    color: white;
     background: rgb(53, 53, 221);
     grid-row: 4;
     grid-column: 1;
@@ -83,6 +90,7 @@ body {
     font-size: 35px;
     color: white;
     background: black;
+    opacity: .7;
 }
 
 .dealcard1{
