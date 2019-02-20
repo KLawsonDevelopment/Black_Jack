@@ -41,4 +41,4 @@ anime.js: https://animejs.com/
 
 #Version 2 revision
 
-More animations, adding sounds, player score, Player/Dealer side choice, 2 player mode
+More animations, adding sounds, player score, Player/Dealer side choice, 2 player mode, remove cards as they are dealt
