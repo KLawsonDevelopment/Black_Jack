@@ -26,6 +26,8 @@ Free Card Set: http://acbl.mybigcommerce.com/52-playing-cards/
 
 Flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
+anime.js: https://animejs.com/
+
 
 #Version 2 revision
 

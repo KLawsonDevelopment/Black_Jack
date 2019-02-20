@@ -2,6 +2,7 @@ $(document).ready(function () {
     console.log("jQuery active")
 
     //Took this Deck class from https://wsvincent.com/javascript-object-oriented-deck-cards/
+    // Deck class
 
     class Deck {
         constructor(deck) {
@@ -20,18 +21,23 @@ $(document).ready(function () {
 
     var deck1 = new Deck();
 
+    //Target player side cards for manipulation
     var playcard1 = document.querySelector('.playcard1')
     var playcard2 = document.querySelector('.playcard2')
     var playcard3 = document.querySelector('.playcard3')
     var playcard4 = document.querySelector('.playcard4')
     var playcard5 = document.querySelector('.playcard5')
 
+
+    //Target dealer side cards for manipulation
     var dealcard1 = document.querySelector('.dealcard1')
     var dealcard2 = document.querySelector('.dealcard2')
     var dealcard3 = document.querySelector('.dealcard3')
     var dealcard4 = document.querySelector('.dealcard4')
     var dealcard5 = document.querySelector('.dealcard5')
 
+
+    //Global variables
     var playerArray = []
     var playerTotal = 0
     var playerCardArr = [playcard1, playcard2, playcard3, playcard4, playcard5]
@@ -42,7 +48,7 @@ $(document).ready(function () {
 
 
 
-
+    //Player draws a card
     function playerDraw() {
         playerArray.push(deck1.deck[Math.floor(Math.random() * deck1.deck.length)])
         playerTotal = 0;
@@ -66,6 +72,7 @@ $(document).ready(function () {
         return;
     }
 
+    //Dealer draws a card
     function dealerDraw() {
         dealerArray.push(deck1.deck[Math.floor(Math.random() * deck1.deck.length)])
         dealerTotal = 0;
@@ -89,6 +96,7 @@ $(document).ready(function () {
         return;
     }
 
+    //Flip player side card to proper card image
     function playCardFlip(playcard) {
         for (let i = 0; i < playcard.length; i++) {
             if (playerArray[i] == 'Ace of Spades') {
@@ -250,6 +258,8 @@ $(document).ready(function () {
         }
     }
 
+
+    //Flip dealer side cards for proper card image
     function dealCardFlip(dealcard) {
         for (let i = 0; i < dealcard.length; i++) {
             if (dealerArray[i] == 'Ace of Spades') {
@@ -412,6 +422,7 @@ $(document).ready(function () {
         }
     }
 
+    //Initial deck builds
     playerDraw();
     playerDraw();
     dealerDraw();
@@ -419,12 +430,13 @@ $(document).ready(function () {
     playCardFlip(playerCardArr);
     dealCardFlip(dealerCardArr);
 
-
+    //Manipulate Dealer total
     $('#dealer2').text("Total : " + dealerTotal)
 
-
+    //Manipulate Player total
     $('#player2').text("Total : " + playerTotal);
 
+    //Check for Ace value
     function playerCheck() {
         if (playerTotal > 21) {
             for (let i = 0; i < playerArray.length; i++) {
@@ -439,6 +451,7 @@ $(document).ready(function () {
         }
     }
 
+    //Check for Ace value
     function dealerCheck() {
         if (dealerTotal > 21) {
             for (let i = 0; i < dealerArray.length; i++) {
@@ -453,9 +466,11 @@ $(document).ready(function () {
         }
     }
 
+    //Initial check for double Ace
     playerCheck();
     dealerCheck();
 
+    //Check for player Bust and deactivate buttons
     function playBustCheck() {
         if (playerTotal > 21) {
             $('#bust').text('You have busted! House wins!');
@@ -465,6 +480,7 @@ $(document).ready(function () {
 
     }
 
+    //Check for Dealer Bust and deactivate buttons
     function dealBustCheck() {
         if (dealerTotal > 21) {
             $('#bust').text('House has busted! Player wins!')
@@ -475,7 +491,7 @@ $(document).ready(function () {
 
 
 
-
+    //Hit button activation
     $('#hit').on('click', function () {
         playerDraw();
         playCardFlip(playerCardArr);
@@ -485,6 +501,7 @@ $(document).ready(function () {
         playBustCheck();
     })
 
+    //Stand button activation
     $('#stand').on('click', function () {
 
         while (dealerTotal < 16 && playerTotal > dealerTotal) {
@@ -516,21 +533,24 @@ $(document).ready(function () {
             $('#hit').prop("disabled", true);
             $('#stand').prop("disabled", true);
         }
-
-
     })
+
+    //Reset button to reload page
     $('#reset').on('click', function () {
         location.reload();
     })
 
-    $('#rules').on('click',function() {
+    //Click on rules to bring up rules
+    $('#rules').on('click', function () {
         $('#rulesText').removeClass('hidden')
     })
 
-    $('#okay').on('click', function() {
+    //Click on 'I understand' to send rules away
+    $('#okay').on('click', function () {
         $('#rulesText').addClass('hidden')
     })
 
+    //Animations
     anime({
         targets: '.dealcard1',
         translateX: 420,

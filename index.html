@@ -10,38 +10,47 @@
 </head>
 
 <body>
+    <!--Deck Top-->
+    <img src="/JPEG/Gray_back.jpg" alt="Deck Top" class="deck">
 
-        <img src="/JPEG/Gray_back.jpg" alt="Deck Top" class="deck">
-        <h1 class="dealer">Dealer</h1>
-        <img src="/JPEG/Gray_back.jpg" alt="Deck Top" class="dealcard1">
-        <img src="/JPEG/Gray_back.jpg" alt="Deck Top" class="dealcard2">
-        <img src="/JPEG/Gray_back.jpg" alt="Deck Top" class="dealcard3">
-        <img src="/JPEG/Gray_back.jpg" alt="Deck Top" class="dealcard4">
-        <img src="/JPEG/Gray_back.jpg" alt="Deck Top" class="dealcard5">
-        <h3 id="dealer2">Test</h3>
-    
+    <!--Dealer table side-->
+    <h1 class="dealer">Dealer</h1>
+    <img src="/JPEG/Gray_back.jpg" alt="Deck Top" class="dealcard1">
+    <img src="/JPEG/Gray_back.jpg" alt="Deck Top" class="dealcard2">
+    <img src="/JPEG/Gray_back.jpg" alt="Deck Top" class="dealcard3">
+    <img src="/JPEG/Gray_back.jpg" alt="Deck Top" class="dealcard4">
+    <img src="/JPEG/Gray_back.jpg" alt="Deck Top" class="dealcard5">
+    <h3 id="dealer2">Test</h3>
+
+
+    <!--Bust Placement-->
     <h1 id="bust"></h1>
 
+
+    <!--Hit and Stand buttons-->
     <button id="hit">Hit</button>
     <button id="stand">Stand</button>
 
-        <h1 class="player">Player</h1>
-        <img src="/JPEG/Gray_back.jpg" alt="Deck Top" class="playcard1">
-        <img src="/JPEG/Gray_back.jpg" alt="Deck Top" class="playcard2">
-        <img src="/JPEG/Gray_back.jpg" alt="Deck Top" class="playcard3">
-        <img src="/JPEG/Gray_back.jpg" alt="Deck Top" class="playcard4">
-        <img src="/JPEG/Gray_back.jpg" alt="Deck Top" class="playcard5">
-        <h3 id="player2">Test</h3>
+
+    <!--Player side of Board-->
+    <h1 class="player">Player</h1>
+    <img src="/JPEG/Gray_back.jpg" alt="Deck Top" class="playcard1">
+    <img src="/JPEG/Gray_back.jpg" alt="Deck Top" class="playcard2">
+    <img src="/JPEG/Gray_back.jpg" alt="Deck Top" class="playcard3">
+    <img src="/JPEG/Gray_back.jpg" alt="Deck Top" class="playcard4">
+    <img src="/JPEG/Gray_back.jpg" alt="Deck Top" class="playcard5">
+    <h3 id="player2">Test</h3>
 
 
-
+    <!--Reset for game restart-->
     <button id="reset">Reset</button>
 
-
+    <!--Rules button to see rules of game-->
     <button id="rules">Rules</button>
 
     <p class="hidden" id="rulesText">Welcome to Black Jack. Here are the basic rules. <br>
-        Your goal is to get as close to the number 21 as possible without going over 21. Jack, Queen, King are equal to 10. <br>
+        Your goal is to get as close to the number 21 as possible without going over 21. Jack, Queen, King are equal to
+        10. <br>
         Ace is equal to 11 unless you go over 21, in which case it becomes 1. <br>
         If you think you're too low, you can click 'Hit' to add a card to your side of the table and to your score. <br>
         Once you find a number you're happy with, hit 'Stand'. This means you don't want to draw anymore. <br>
@@ -49,6 +58,8 @@
         Good luck.
         <button id="okay">I understand</button>
     </p>
+
+    <!--Scripts for JS files-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="/js/script.js"></script>
