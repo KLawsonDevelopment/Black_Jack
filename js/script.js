@@ -577,6 +577,7 @@ $(document).ready(function () {
     })
 
     //Animations
+    
     anime({
         targets: '.dealcard1',
         translateX: 420,
