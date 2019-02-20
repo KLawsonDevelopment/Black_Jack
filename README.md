@@ -42,3 +42,13 @@ anime.js: https://animejs.com/
 #Version 2 revision
 
 More animations, adding sounds, player score, Player/Dealer side choice, 2 player mode, remove cards as they are dealt
+
+#Shoutouts
+
+Ronnie - Wireframe, UX 
+
+John - Anime.css
+
+Emma - Methodology of Functions
+
+Chad/Taylor - Advice on card art
