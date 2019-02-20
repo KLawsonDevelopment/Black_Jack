@@ -47,7 +47,7 @@ More animations, adding sounds, player score, Player/Dealer side choice, 2 playe
 
 Ronnie - Wireframe, UX 
 
-John - Anime.css
+John - Anime.js
 
 Emma - Methodology of Functions
 
