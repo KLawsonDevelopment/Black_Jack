@@ -77,6 +77,17 @@ body {
     align-self: baseline
 }
 
+#rules {
+    color: white;
+    background: black;
+    border: 1px solid white;
+    grid-row: 5;
+    grid-column: 8;
+    font-size: 20px;
+    padding: 40px;
+    opacity: .8;
+}
+
 
 
 #player2 {
@@ -186,3 +197,21 @@ body {
     width: 200px;
 }
 
+#rulesText {
+    grid-row: 3;
+    grid-column: 3/8;
+    font-size: 48px;
+    background: black;
+    color: white;
+    z-index: 1;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+
+
+#okay {
+    font-size: 30px;
+}

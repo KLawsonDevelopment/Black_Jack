@@ -12,6 +12,8 @@ https://trello.com/b/6LhTqE7O/unit-1-project-black-jack
 
 #Wireframe
 
+
+
 #Tech/Libraries/Frameworks
 
 JS Library: Underscore.js
@@ -26,3 +28,5 @@ Flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 
 #Version 2 revision
+
+More animations, adding sounds, player score, Player/Dealer side choice, 2 player mode

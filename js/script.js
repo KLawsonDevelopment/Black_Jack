@@ -523,6 +523,14 @@ $(document).ready(function () {
         location.reload();
     })
 
+    $('#rules').on('click',function() {
+        $('#rulesText').removeClass('hidden')
+    })
+
+    $('#okay').on('click', function() {
+        $('#rulesText').addClass('hidden')
+    })
+
     anime({
         targets: '.dealcard1',
         translateX: 420,
