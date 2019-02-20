@@ -22,7 +22,7 @@ https://trello.com/b/6LhTqE7O/unit-1-project-black-jack
 
 #Wireframe
 
-<img src='BlackJackWireframe.jpg' alt="Wireframe" height="500" width="250">WireFrame
+<img src='BlackJackWireframe.jpg' alt="Wireframe" height="500" width="250">
 
 #Tech/Libraries/Frameworks
 
