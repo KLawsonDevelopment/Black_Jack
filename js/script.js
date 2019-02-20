@@ -422,6 +422,18 @@ $(document).ready(function () {
         }
     }
 
+    function playFlipAll(playcard) {
+        for (let i = 0; i < playcard.length; i++) {
+            $(playcard[i]).attr('src', '/JPEG/Gray_back.jpg')
+        }
+    }
+
+    function dealFlipAll(dealcard) {
+        for (let i = 0; i < dealcard.length; i++) {
+            $(dealcard[i]).attr('src', '/JPEG/Gray_back.jpg')
+        }
+    }
+
     //Initial deck builds
     playerDraw();
     playerDraw();
@@ -537,7 +549,21 @@ $(document).ready(function () {
 
     //Reset button to reload page
     $('#reset').on('click', function () {
-        location.reload();
+        $('#hit').prop("disabled", false);
+        $('#stand').prop("disabled", false);
+        playerArray = [];
+        dealerArray = [];
+        playFlipAll(playerCardArr);
+        dealFlipAll(dealerCardArr);
+        playerDraw();
+        playerDraw();
+        dealerDraw();
+        dealerDraw();
+        playCardFlip(playerCardArr);
+        dealCardFlip(dealerCardArr);
+        $('#dealer2').text("Total : " + dealerTotal);
+        $('#player2').text("Total : " + playerTotal);
+        $('#bust').text("");
     })
 
     //Click on rules to bring up rules
