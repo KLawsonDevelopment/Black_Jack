@@ -4,7 +4,7 @@ Do you think you're lucky?
 
 Welcome to Black Jack, a staple of Casinos. This is a simple Javascript based game aimed to see who is lucky, and who may go a little too far with their luck.
 
-Javascript checks to see who is the winner of each math through various If statements and changes the cards and text on the screen through DOM Manipulation. 
+Javascript checks to see who is the winner of each match through various If statements and changes the cards and text on the screen through DOM Manipulation. 
 
 Anime.js has been used to create the 'dealing' animation.
 
