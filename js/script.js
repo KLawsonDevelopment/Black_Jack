@@ -422,12 +422,14 @@ $(document).ready(function () {
         }
     }
 
+    // Flip Player cards over
     function playFlipAll(playcard) {
         for (let i = 0; i < playcard.length; i++) {
             $(playcard[i]).attr('src', '/JPEG/Gray_back.jpg')
         }
     }
 
+    // flip Dealer cards over
     function dealFlipAll(dealcard) {
         for (let i = 0; i < dealcard.length; i++) {
             $(dealcard[i]).attr('src', '/JPEG/Gray_back.jpg')
@@ -547,7 +549,7 @@ $(document).ready(function () {
         }
     })
 
-    //Reset button to reload page
+    //Reset button to reload game
     $('#reset').on('click', function () {
         $('#hit').prop("disabled", false);
         $('#stand').prop("disabled", false);
